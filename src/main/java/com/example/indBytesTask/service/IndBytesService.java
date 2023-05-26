@@ -1,10 +1,8 @@
 package com.example.indBytesTask.service;
 
 import com.example.indBytesTask.Response.ResponseVO;
-import com.example.indBytesTask.vo.SelectedMovieListVO;
-import com.example.indBytesTask.vo.SelectedMovieVo;
-import com.example.indBytesTask.vo.ViewedMovieRequest;
-import com.example.indBytesTask.vo.ViewedMovieResponse;
+import com.example.indBytesTask.entity.Users;
+import com.example.indBytesTask.vo.*;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -19,4 +17,18 @@ public interface IndBytesService {
     List<SelectedMovieListVO> movieList(ViewedMovieRequest request);
 
     List<SelectedMovieListVO> getAllMovies();
+
+    void createUser(UsersVo usersVo);
+
+    void createMovie(MoviesVo moviesVo);
+
+    void updateUser(UsersVo usersVo,int userId);
+
+    void updateMovie(MoviesVo moviesVo, int movieId);
+
+    List<Users> getAllUsers();
+
+    void deleteUser(int userId);
+
+    void deleteMovie(Integer movieId);
 }

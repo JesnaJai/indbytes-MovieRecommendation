@@ -8,6 +8,7 @@ import lombok.NoArgsConstructor;
 import javax.persistence.*;
 
 @Entity
+@Data
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
@@ -18,4 +19,7 @@ public class Movie {
     private int movieId;
     @Column(name = "movie_name")
     private String movieName;
+
+
+
 }

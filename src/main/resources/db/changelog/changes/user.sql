@@ -15,3 +15,4 @@ INSERT INTO users(user_name)
     VALUES('user1'),
         ('user2'),
         ('user3');
+

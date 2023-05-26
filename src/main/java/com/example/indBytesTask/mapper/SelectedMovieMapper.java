@@ -1,10 +1,8 @@
 package com.example.indBytesTask.mapper;
 
 import com.example.indBytesTask.entity.SelectedMovies;
-import com.example.indBytesTask.vo.MovieList;
-import com.example.indBytesTask.vo.SelectedMovieListVO;
-import com.example.indBytesTask.vo.SelectedMovieVo;
-import com.example.indBytesTask.vo.ViewedMovieResponse;
+import com.example.indBytesTask.entity.Users;
+import com.example.indBytesTask.vo.*;
 import liquibase.pro.packaged.V;
 
 import java.time.LocalDate;
@@ -30,6 +28,12 @@ public static ViewedMovieResponse viewedMovie(List<SelectedMovieListVO> selected
     return ViewedMovieResponse.builder()
             .userId(userId)
             .movieLists(movieVoList)
+            .build();
+}
+
+public static Users toUsers(UsersVo usersVo){
+    return Users.builder()
+            .userName(usersVo.getUserName())
             .build();
 }
 
